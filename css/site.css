@@ -8,9 +8,34 @@
     --hm-body-font: 'Roboto', sans-serif;
 }
 
-/* #region main template*/
-body, 
-html{
+
+/* #region Element Overrides */
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+    font-family: var(--hm-heading-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--hm-title-color);
+    letter-spacing: .1rem;
+}
+
+a {
+    color: var(--cf-theme-500);
+}
+
+a:hover {
+    color: var(--cf-theme-400);
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--cf-theme-700);
+    --bs-btn-border-color: var(--cf-theme-600);
+    --bs-btn-hover-bg: var(--cf-theme-700);
+    --bs-btn-hover-border-color: var(--cf-theme-700);
+}
+/* #endregion Element Overrides */
+
+/* #region Main Template */
+body, html {
     height: 100%;
 }
 
@@ -26,87 +51,71 @@ main {
 footer {
     flex-shrink: 0;
 }
-/* #endregion main template*/
+/* #endregion Main Template */
 
-/* #region element overrides */
-h6,
-.h6, 
-h5, 
-.h5, 
-h4, 
-.h4, 
-h3, 
-.h3, 
-h2, 
-.h2, 
-h1, 
-.h1{
-    font-family: var(--hm-heading-font);
-    font-weight:700;
-    text-transform: uppercase;
-    color: var(--hm-title-color);
-    letter-spacing: .1rem;
-}
-
-/*links */
-
-a{
-    color: var(--hm-theme-500);
-}
-
-a:hover{
-    color: var(--hm-theme-400);
-}
-
-/*buttons */
-.btn-primary{
-    --bs-btn-bg: var(--cf-theme-600);
-    --bs-btn-border-color: var(--cf-theme-600);
-    --bs-btn-hover-bg: var(--cf-theme-700);
-    --bs-btn-hover-border-color: var(--cf-theme-700);
-}
-
-/* #endregion element override*/
-
-
-body{
-    color: var(--hm-dark-color);
-background: #EFEFBB;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #D4D3DD, #EFEFBB);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #D4D3DD, #EFEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-
-
-nav{
-    background-color: var(--cf-blue-700);
-}
-
-.applogo{
-    max-width: 400px;
-}
-
-.mainTitle{
-    font-size: 2rem;
-}
-
-.subTitle{
-    font-size: 1.2rem;
-}
-
-.techStack i{
+.mainTitle {
+    font-family: var(--hm-title-font);
     font-size: 3rem;
+    line-height: 4rem;
 }
 
-footer{
-    color: var(--hm-light-color);
-    background-color: var(--cf-theme-700);
+.subTitle {
+    font-family: var(--hm-subtitle-font);
+    font-size: 1.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
 }
 
-footer i{
+.descText {
+    font-family: var(--hm-body-font);
+    font-size: 1rem;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0.0rem;
+}
+
+.techStack i {
     font-size: 2rem;
 }
 
-footer i:hover{
-    color: var(--cf-theme-200);
+body {
+    color: var(--hm-dark-color);
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+nav {
+    background-color: var(--cf-theme-900);
+}
+
+.app-logo {
+    max-width: 300px;
+}
+
+footer {
+    color: var(--hm-light-color);
+    background-color: var(--cf-theme-900);
+    
+}
+
+footer i {
+    font-size: 2rem;
+}
+
+footer i:hover {
+    color: var(--cf-theme-300);
+}
+
+.even{
+ font-weight: bold;
+ color: red;
+ background-color: var(--cf-theme-300);
+}
+
+.odd{
+    font-weight: italic;
+    background-color: var(--cf-theme-200);
 }

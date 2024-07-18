@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>APP NAME: Coding Challenge by Hlois</title>
+    <title>Hundo: Coding Challenge by Hlois</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,8 +44,8 @@
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="/img/1.png" width="40" class="d-line-block align-text-top">
-                    APP NAME
+                    <img src="/img/2.png" width="40" class="d-line-block align-text-top">
+                    HUNDO
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,10 +63,10 @@
                             <a class="nav-link" href="/code.html">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">The Repo</a>
+                            <a class="nav-link" href="https://github.com/hloism/Hundo">The Repo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="https://sdportfoliomlo.netlify.app/">About</a>
                         </li>
                     </ul>
                 </div>
@@ -75,14 +75,37 @@
     </header>
     <main>
         <div class="container mt-5">
-            <h1>APP UI GOES HERE</h1>
-            <input id="message" placeholder="Enter a message" class="form-control" value="Hello World">
-            <button id="btnSubmit" type="button" class="btn btn-primary mt-3"> Display
-                Message</button>
-            <div class="alert alert-danger mt-5 p-4 d-none" role="alert" id="alertMessage">
-                <!--Message Goes Here-->
+            <h1>Hundo a coding challenge</h1>
+            <div class="mb-4">Life live one loop at a time. A javascript coding challenge that displays the number from
+                0 to 100.
+                Displays the even numbers in <strong>Bold</strong>.</div>
+
+            <h2 class="border-bottom border-2 mb-3">Instructions</h2>
+
+            <div class="row gy-3">
+                <div class="col">
+                    <label class="form-label" for="startValue">Starting Value:</label>
+                    <input id="startValue" type="number" class="form-control" value="0">
+                </div>
+                <div class="col">
+                    <label class="form-label" for="endValue">Ending Value:</label>
+                    <input id="endValue" type="number" class="form-control" value="100">
+                </div>
+
+                <div class="col-12 text-end">
+                    <button type="button" id="btnSubmit" class="btn btn-primary">Display</button>
+                </div>
             </div>
-        </div>
+            <div class="row gy-3 mt-3" id="resultsDisplay">
+                <div class="col">
+                    <h2 class="border-bottom border-2">Results</h2>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row row-cols-2 row-cols-md-5" id="resultsData">
+                    <!--Results Go Here-->
+                </div>
+            </div>
     </main>
     <footer class="py-3">
         <div class="container-fluid">
@@ -92,7 +115,7 @@
                     <span>HLois Mlo | hlois.mlo@gmail.com</span>
                 </div>
                 <div class="col text-center gap-2 justify-content-center justify-content-md-end">
-                    <img src="/img/3.png" height="30" alt="Logo">
+                    <img src="/img/3.png" height="70" alt="Logo">
                 </div>
                 <div class="col hstack gap-3">
                     <div><a href="#"><i class="bi bi-linkedin"></i></a></div>
@@ -112,7 +135,7 @@
     <script src="/js/site.js"></script>
 
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", getValues2);
+        document.getElementById("btnSubmit").addEventListener("click", getValues);
     </script>
 
 </body>

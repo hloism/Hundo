@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>APP NAME: Coding Challenge by Hlois</title>
+    <title>Hundo: Coding Challenge by Hlois</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -45,8 +45,8 @@
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="/img/1.png" width="40" class="d-line-block align-text-top">
-                    APP NAME
+                    <img src="/img/2.png" width="40" class="d-line-block align-text-top">
+                    HUNDO
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,10 +64,10 @@
                             <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">The Repo</a>
+                            <a class="nav-link" href="https://github.com/hloism/Hundo">The Repo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="https://sdportfoliomlo.netlify.app/">About</a>
                         </li>
                     </ul>
                 </div>
@@ -81,12 +81,41 @@
             <div class="col-12 col-lg-8">
                 <pre class="line-numbers">
                     <code class="language-javascript">
-                    function getValues2(){
-                    
-                        let inputMessage = document.getElementById("message").value;
-                        let alertMessage = document.getElementById("alertMessages");
-                        alertMessage.innerText = inputMessage;
-                    }
+//get values from user
+function getValues() {
+let startValue = document.getElementById("startValue").value;
+let endValue = document.getElementById("endValue").value;
+
+//parse input values into integers
+startValue = parseInt(startValue);
+endValue = parseInt(endValue);
+
+//check to see if values are int
+if(Number.isInteger(startValue) && Number.isInteger(endValue)) {
+//generate numbers
+let numbers = generateNumbers(startValue, endValue)
+
+//display the output
+displayNumbers(numbers)
+} else {
+alert("Only integers allowed. Please enter a number.")
+}
+}
+
+//generates numbers
+function generateNumbers(startValue, endValue) {
+let numbers = [];
+
+for(i = startValue; i <= endValue; i++) { numbers.push(i); } return numbers; } //displays numbers function
+    displayNumbers(numbers) { let templateCols="" ; //<div>0</div>
+    for(let index = 0; index < numbers.length; index++) { let className="" ; if(numbers[index] % 2==0) {
+        className="even" ; }else{ className="odd" ; } templateCols +=`<div class="${className}">${numbers[index]}</div>
+        `;
+        }
+
+        document.getElementById("resultsData").innerHTML = templateCols;
+
+        }
                     </code>
                 </pre>
             </div>
@@ -106,7 +135,7 @@
                     <span>HLois Mlo | hlois.mlo@gmail.com</span>
                 </div>
                 <div class="col text-center gap-2 justify-content-center justify-content-md-end">
-                    <img src="/img/3.png" height="30" alt="Logo">
+                    <img src="/img/3.png" height="70" alt="Logo">
                 </div>
                 <div class="col hstack gap-3">
                     <div><a href="#"><i class="bi bi-linkedin"></i></a></div>
